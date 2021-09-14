@@ -161,4 +161,4 @@ async def on_message(message):
                     await message.channel.send('This bot was made by hugonun(https://github.com/hugonun/).\nSource code: https://github.com/hugonun/discord2sheet-bot')
 
 
-client.run('ODUwMDk1MDAzOTY3MTYwMzMw.YLkuqg.inpvmvLB3iE7OYW1CyYlgXDSHNY') # Add bot token here
+client.run('') # Add bot token here
