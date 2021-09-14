@@ -23,6 +23,7 @@ async def on_message(message):
     CHANNELID = None #in integer form
     if CHANNELID is not None and message.channel.id != CHANNELID:
         await message.channel.send('Please send address in specfied channel only')
+        await message.channel.purge(limit=2)
         return
     
     # Restrict the command to a role
@@ -30,6 +31,7 @@ async def on_message(message):
     REQUIREDROLE = None
     if REQUIREDROLE is not None and discord.utils.get(message.author.roles, id=REQUIREDROLE) is None and message.content.startswith('!s '):
         await message.channel.send('You don\'t have the required role!')
+        await message.channel.purge(limit=2)
         return
                                                       
     # Command to insert data to excel
