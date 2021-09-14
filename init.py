@@ -35,7 +35,13 @@ async def on_message(message):
         return
                                                       
     # Command to insert data to excel
+    
     if message.content.startswith('!s '):
+     def address_capture:   
+      text = message.content
+      slice_text=text[:2:]
+      check_text="0x"
+      if slice_text == check_text and len(text)==42:
         SPREADSHEET_ID = '' # Add ID here
         RANGE_NAME = 'A1'
         FIELDS = 1 # Amount of fields/cells
@@ -51,7 +57,9 @@ async def on_message(message):
             await message.channel.send('Your data has been successfully submitted!')
         else:
             # Needs more/less fields
-            await message.channel.send('Error: You need to add {0} fields, meaning it can only have {1} comma.'.format(FIELDS,FIELDS-1))
+            #await message.channel.send(':x: You need to add {0} fields, meaning it can only have {1} comma.'.format(FIELDS,FIELDS-1))
+            await message.channel.send(':x: Please enter ETH address only' )
+            address_capture()
     
     # Whois
     # Please dont remove the copyright and github repo
