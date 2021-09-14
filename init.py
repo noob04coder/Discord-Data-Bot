@@ -23,7 +23,7 @@ async def on_message(message):
     CHANNELID = None #in integer form
     if CHANNELID is not None and message.channel.id != CHANNELID:
         await message.channel.send('Please send address in specfied channel only')
-
+        return
     
     # Restrict the command to a role
     # Change REQUIREDROLE to a role id or None 
