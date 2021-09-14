@@ -28,7 +28,7 @@ async def on_message(message):
     # Restrict the command to a role
     # Change REQUIREDROLE to a role id or None 
     REQUIREDROLE = None
-    if REQUIREDROLE is not None and discord.utils.get(message.author.roles, id=REQUIREDROLE is None and message.content.startswith('!s '):
+    if REQUIREDROLE is not None and discord.utils.get(message.author.roles, id=REQUIREDROLE) is None and message.content.startswith('!s '):
         await message.channel.send('You don\'t have the required role!')
         return
                                                       
