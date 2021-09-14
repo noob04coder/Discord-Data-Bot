@@ -18,21 +18,20 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-    # Restrict the command to a role
-    # Change REQUIREDROLE to a role id or None
-    CHANNELID = None
+    # Restrict the command to a channel
+    # Change CHANNELID to a channel id or None
+    CHANNELID = None #in integer form
     if CHANNELID is not None and message.channel.id != CHANNELID:
-        await message.channel.send('Please send ')
+        await message.channel.send('Please send address in specfied channel only')
+
     
+    # Restrict the command to a role
+    # Change REQUIREDROLE to a role id or None 
     REQUIREDROLE = None
     if REQUIREDROLE is not None and discord.utils.get(message.author.roles, id=REQUIREDROLE is None and message.content.startswith('!s '):
         await message.channel.send('You don\'t have the required role!')
         return
-    
-    CHANNELID = None
-    if CHANNELID is not None and message.channel.id != CHANNELID:
-        await message.channel.send('Please send address in specfied channel only')
-
+                                                      
     # Command to insert data to excel
     if message.content.startswith('!s '):
         SPREADSHEET_ID = '' # Add ID here
