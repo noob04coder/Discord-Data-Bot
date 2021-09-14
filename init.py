@@ -25,7 +25,7 @@ async def on_message(message):
         await message.channel.send('Please send ')
     
     REQUIREDROLE = None
-    if REQUIREDROLE is not None and discord.utils.get(message.author.roles, id=str(REQUIREDROLE)) is None and message.content.startswith('!s '):
+    if REQUIREDROLE is not None and discord.utils.get(message.author.roles, id=REQUIREDROLE is None and message.content.startswith('!s '):
         await message.channel.send('You don\'t have the required role!')
         return
     
