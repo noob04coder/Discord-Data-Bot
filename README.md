@@ -22,7 +22,7 @@ Make sure to rename it to credentials.json and it is stored in the same director
 
 ```
 {
-"prefix":"!s", "Comment":"prefix of the bot",
+"prefix":"!s", "Comment":"prefix of the bot (make sure it consist of 2 letters like !s",
 "token":"", "Comment":"bot token",
 "spreadsheet":"1yzJklTMwrtyRUP8TI4256E0UlOSqagToyzSBRR8b20Q", "Comment":"spreadsheet id (present between two slashes)",
 "role":null, "Comment":"set it to role id or null",
