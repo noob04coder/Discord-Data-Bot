@@ -16,7 +16,7 @@ Username - UserID - Date - Field 1 - Field 2
 
 **Step 1:** Enable the API and download credentials.json. This can be done here: https://developers.google.com/sheets/api/quickstart/python#step_1_turn_on_the
 
-*Make sure to rename it to credentials.json and it is stored in the same directory as the bot.*
+**Make sure to rename it to credentials.json and it is stored in the same directory as the bot.**
 
 **Step 2:** Ceate config.json in the bot folder(same level as init.py) and paste the following and change the values(<>):
 
