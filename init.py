@@ -60,7 +60,7 @@ async def on_message(message):
             await message.channel.send(':white_check_mark: Your data has been successfully submitted!')
             time.sleep(3)
             await message.channel.purge(limit=2)
-            if REQUIREDROLE is not None :
+            if REQUIREDROLE is not None : # allows only one successful message from a user (requires RequiredRole to be enabled)
                 role_remove= discord.utils.get(message.author.roles, id=REQUIREDROLE)
                 await message.author.remove_roles(role_remove)
       else:
