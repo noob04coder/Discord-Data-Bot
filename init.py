@@ -64,8 +64,9 @@ async def on_message(message):
             DATA = [message.author.name] + [str(message.author.id)] + [str(message.created_at)] + result
             sheet.add(SPREADSHEET_ID, RANGE_NAME, DATA)
             await message.channel.send(':white_check_mark: Your data has been successfully submitted!') #customized
+            if data["toggle-purge-success"] == True:
             time.sleep(3) #customized
-#           # await message.channel.purge(limit=2) #customized
+            await message.channel.purge(limit=2) #customized
             if REQUIREDROLE is not None :
              role_remove = discord.utils.get(message.author.roles, id=REQUIREDROLE) #customized
              await message.author.remove_roles(role_remove) #customized
