@@ -1,6 +1,6 @@
 # discord2sheet-bot
 
-This bot allows users to submit messages directly to your Google Sheet.
+This bot allows users to submit ethereum address to your Google Sheet.
 
 Example:
 
