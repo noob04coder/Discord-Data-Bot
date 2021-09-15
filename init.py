@@ -10,6 +10,7 @@ from gsheet import *
 
 client = discord.Client()
 sheet = gsheet()
+user_data = json.loads(./config.json)
 
 @client.event
 async def on_ready():
