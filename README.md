@@ -21,7 +21,7 @@ Make sure to rename it to credentials.json and it is stored in the same director
 **Step 2:** Ceate config.json in the bot folder(same level as init.py) and paste the following and change the values(<>):
 
 {
-"prefix":"!s", "Comment":"prefix of the bot",
+"prefix":"!s", "Comment":"prefix of the bot",\n
 "token":"", "Comment":"bot token",
 "spreadsheet":"1yzJklTMwrtyRUP8TI4256E0UlOSqagToyzSBRR8b20Q", "Comment":"spreadsheet id (present between two slashes)",
 "role":null, "Comment":"set it to role id or null",
