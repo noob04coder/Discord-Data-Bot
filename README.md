@@ -28,12 +28,13 @@ Make sure to rename it to credentials.json and it is stored in the same director
 "role":null, "Comment":"set it to role id or null",
 "channel":null,"Comment":"set it to channel id or null",
 "start-row":"A1","Comment":"row from where data starts",
-"toggle-purge":false,"Comment":"toogle wrong message deleting(it is case sensitive)"
+"toggle-purge":false,"Comment":"toogle wrong message deleting(it is case sensitive)",
+"toggle-purge-success":false,"Comment":"toogle success message deleting(it is case sensitive)"
 }
 ```
 prefix = <> - command to which the bot will reply to . Default is '!s'
 
-start-row = <> - Where the data should go in the spreadsheet. Default value is `A1`.
+token = <> - The token of the Discord bot.
 
 spreadsheet = <> - The ID of the spreashsheet to store the data. It can be found on the URL once opened.
 
@@ -41,9 +42,11 @@ role = <> - If you want to restrict the command to a specific role, insert here 
 
 channel = <> - If you want to restrict the command to a specific channel, insert here the channel id (as integer). If not, insert `null`.
 
-token = <> - The token of the Discord bot.
+start-row = <> - Where the data should go in the spreadsheet. Default value is `A1`.
 
-toggle-purge = <> - If you want to delete wrong messages (from pesron without the role or from wrong channel) . 'true' for enable, 'false' for disable (proper font-case is important) 
+toggle-purge = <> - If you want to delete wrong messages (from pesron without the role or from wrong channel) . 'true' for enable, 'false' for disable (proper font-case is important)
+
+toggle-purge-success = <> - If you want to delete success messages (after success data entry) . 'true' for enable, 'false' for disable (proper font-case is important)
 
 **Step 3:** Install Python dependencies
 
