@@ -60,16 +60,15 @@ async def on_message(message):
             await message.channel.send(':white_check_mark: Your data has been successfully submitted!')
             time.sleep(3)
             await message.channel.purge(limit=2)
+            if REQUIREDROLE is not None :
+                role_remove= discord.utils.get(message.author.roles, id=REQUIREDROLE)
+                await message.author.remove_roles(role_remove)
       else:
             # Needs more/less fields
             #await message.channel.send(':x: You need to add {0} fields, meaning it can only have {1} comma.'.format(FIELDS,FIELDS-1))
             await message.channel.send(':x: Please enter ETH address only' )
             time.sleep(3)
             await message.channel.purge(limit=2)
-            if REQUIREDROLE is not None :
-                role_remove= discord.utils.get(message.author.roles, id=REQUIREDROLE)
-                await message.author.remove_roles(role_remove)
-            
     
     # Whois
     # Please dont remove the copyright and github repo
