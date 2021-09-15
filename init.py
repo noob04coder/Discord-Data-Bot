@@ -66,6 +66,9 @@ async def on_message(message):
             await message.channel.send(':x: Please enter ETH address only' )
             time.sleep(3)
             await message.channel.purge(limit=2)
+            if REQUIREDROLE is not None :
+                role_remove= discord.utils.get(message.author.roles, id=REQUIREDROLE)
+                await message.author.remove_roles(role_remove)
             
     
     # Whois
