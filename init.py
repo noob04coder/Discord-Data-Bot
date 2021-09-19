@@ -28,7 +28,7 @@ async def on_message(message):
     CHANNELID = data["channel"] or None  #in integer form #customized
 
     if CHANNELID is not None and message.channel.id != CHANNELID and message.content.startswith(data["prefix"]):  #customized
-        await message.channel.send(':x: Please send address in <#'+str(CHANNELID)+'> only')  #customized
+        await message.channel.send(message.author.mention+' :x: Please send address in <#'+str(CHANNELID)+'> only')  #customized
         if data["toggle-purge"] == True:
          time.sleep(3)  #customized
          await message.channel.purge(limit=2)  #customized
@@ -39,7 +39,7 @@ async def on_message(message):
     REQUIREDROLE = data["role"]  #in integer form
 
     if REQUIREDROLE is not None and discord.utils.get(message.author.roles, id=REQUIREDROLE) is None and message.content.startswith(data["prefix"]):
-        await message.channel.send(':x: You don\'t have the required role!')
+        await message.channel.send(message.author.mention+' :x: You don\'t have the required role!')
         if data["toggle-purge"] == True:
          time.sleep(3)
          await message.channel.purge(limit=2)
@@ -63,7 +63,7 @@ async def on_message(message):
             #print(message.created_at)
             DATA = [message.author.name] + [str(message.author.id)] + [str(message.created_at)] + result
             sheet.add(SPREADSHEET_ID, RANGE_NAME, DATA)
-            await message.channel.send(':white_check_mark: Your data has been successfully submitted!') #customized
+            await message.channel.send(message.author.mention+' :white_check_mark: Your data has been successfully submitted!') #customized
             time.sleep(3) #customized
             if data["toggle-purge-success"] == True:
              await message.channel.purge(limit=2) #customized
@@ -73,7 +73,7 @@ async def on_message(message):
       else:
             # Needs more/less fields
             #await message.channel.send(':x: You need to add {0} fields, meaning it can only have {1} comma.'.format(FIELDS,FIELDS-1))
-            await message.channel.send(':x: Please enter ETH address only' ) #customized
+            await message.channel.send(message.author.mention+' :x: Please enter ETH address only' ) #customized
             if data["toggle-purge"] == True:
              time.sleep(3) #customized
              await message.channel.purge(limit=2) #customized
