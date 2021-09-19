@@ -24,7 +24,7 @@ Username - UserID - Date - Field 1 - Field 2
 {
 "prefix":"!s", "Comment":"prefix of the bot (make sure it consist of 2 letters like !s",
 "token":"", "Comment":"bot token",
-"spreadsheet":"1yzJklTMwrtyRUP8TI4256E0UlOSqagToyzSBRR8b20Q", "Comment":"spreadsheet id (present between two slashes)",
+"spreadsheet":"1yzJklTMwrtyRUP8TI4256E0UlOSqagToyzSBRR8b20Q", "Comment":"spreadsheet id (present between two slashes of the spreadsheet url)",
 "role":null, "Comment":"set it to role id or null",
 "channel":null,"Comment":"set it to channel id or null",
 "start-row":"A1","Comment":"row from where data starts",
